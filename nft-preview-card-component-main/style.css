@@ -57,8 +57,9 @@ body{
 }
 
 hr{
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(215, 51%, 70%);
     border-style: hidden;
+    margin-bottom: 20px;
     height: 0.5px;
 }
 
@@ -79,6 +80,7 @@ p{
 h2{
     color: hsl(0, 0%, 100%);
     font-family: 'Outfit', sans-serif;
+    
 }
 
 p{
