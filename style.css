@@ -1,122 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+:root {
+ --p-blue:hsl(215, 51%, 70%);
+ --p-cyan:hsl(178, 100%, 50%);
+ --p-purple:hsl(321, 100%, 50%);
+ --n-bg:hsl(217, 54%, 11%);
+ --n-card:hsl(216, 50%, 16%);
+ --n-line:hsl(215, 29%, 35%);
+ --n-white:hsl(0, 0%, 100%);
+ font-family:Outfit,sans-serif
+}
+
+* {
+ box-sizing:border-box;
+ margin:0;
+ padding:0;
+ text-decoration:none
+}
+* img {
+ display:block
+}
+.white{
+    color: hsl(0, 0%, 100%);
+}
+.cyan{
+    color: hsl(178, 100%, 50%);
+}   
+
+.p-azul{
+    color: hsl(215, 51%, 70%);
+}
 
 body{
-    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: rgb(1,7,55);
+    background: -moz-linear-gradient(180deg, rgba(1,7,55,1) 6%, rgba(6,48,120,1) 99%, rgba(0,146,222,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(1,7,55,1) 6%, rgba(6,48,120,1) 99%, rgba(0,146,222,1) 100%);
+    background: linear-gradient(180deg, rgba(1,7,55,1) 6%, rgba(6,48,120,1) 99%, rgba(0,146,222,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient (startColorstr="#010737",endColorstr="#0092de",GradientType=1); 
 }
+
+
 
 .container{
-    background-color:hsl(216, 50%, 16%);
-    width: 20em;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    padding: 25px;
+    background-color: #063078;
     border-radius: 25px;
-    padding: 22px 22px 22px 22px  ;
-    -webkit-box-shadow: -1px -2px 83px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px -2px 83px -1px rgba(0,0,0,0.75);
-    box-shadow: -1px -2px 83px -1px rgba(0,0,0,0.75);
-    
-    
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    transition: all 0.4s ease 0s;
 }
 
+
+.container:hover {
+box-shadow: 0px 0px 6px rgba(0, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 255, 255, 1);
+-moz-box-shadow: 0px 5px 40px -10pxrgba(0, 255, 255, 1);
+transition: all 0.4s ease 0s;
+}
+.card{
+    position: relative;
+}
 
 .imagen{
-    width: 20em;
-    border-radius: 10px;
+    width: 100%;
+    display: block;
+    border-radius: 25px;
 }
 
-.contianer-in-line{
+
+.ojo{
+    position: absolute;
     display: flex;
-    justify-content: space-between;  
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url(images/icon-view.svg) no-repeat center;
+    background-color: hsl(178, 100%, 50%, .5);
+    opacity: 0;
+    transition:ease-in-out .8s;
+
 }
 
-.flex{
-    display: inline-flex;  
+.ojo:hover {
+    opacity:1;
+    transition:ease-out transform .8s
 }
 
-.avatar{
-    width: 38px;
-    height: 38px;   
+.ojo>* {
+    transform:scale(150%);
+    transition:ease-out transform .8s
 }
 
-.space-between{
-    margin: auto;
-    margin-left: 15px;   
+.ojo:hover>*{
+    transform:scale(100%);
+    transition:ease-out transform .8s
 }
 
-
-.border{
-    margin: auto;
-    padding: auto;
-    width: 38px;
-    height: 38px;
-    border-style: solid  ;
-    border-color: hsl(0, 0%, 100%);
-    border-radius: 100px;
-}
-
-hr{
-    background-color: hsl(215, 51%, 70%);
-    border-style: hidden;
-    margin-bottom: 20px;
-    height: 0.5px;
-}
-
-.style-clock , .style-eth{
-    margin-right: 10px;
-}
-span{
-    color: hsl(178, 100%, 50%) !important;
-}
-
-p{
-   color:hsl(215, 51%, 70%);
-}
-.sapn-style{
-    font-weight: 60px;
-    color: hsl(0, 0%, 100%) !important;
-}
-h2{
-    color: hsl(0, 0%, 100%);
-    font-family: 'Outfit', sans-serif;
+.container h1{
+    padding-top: 32px;
+    font-size: 1.5em;
     
 }
 
-p{
-    font-family: 'Outfit', sans-serif;
+.container p{
+    
+    font-size: 1,125em;
+    line-height:1.5;
+    padding-top:24px
 }
 
-.attribution { 
-    font-size: 15px; 
-    margin: auto;
-    text-align: center; 
+.price{
+
+    
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 28px;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.price li:first-child{
+    font-weight:700;
 }
 
-    @media (max-width:375px) {
 
-        .container{
-            width: 15em;
-            margin: auto;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .imagen{
-            width: 15em;
-        }
-        .avatar{
-            width: 28px;
-            height: 28px;   
-        }
-        .border{
-            width: 28px;
-            height: 28px; 
-        }
-        .attribution { 
-            text-align: center; }
-    }
+.price li:first-child::before{
+
+    content: "";
+    display: inline-block;
+    background:url(images/icon-ethereum.svg) no-repeat center;
+    width:11px;
+    height:18px;
+    vertical-align:middle;
+    margin-right:8px
+
+}
+
+.price li:nth-child(2)::before{
+
+    content: "";
+    display: inline-block;
+    background:url(images/icon-clock.svg) no-repeat center;
+    width:17px;
+    height:17px;
+    vertical-align:middle;
+    margin-right:8px;
+}
+
+.line{
+
+    display: flex;
+    width: auto;
+    height: 1px;
+    background-color:hsl(215, 29%, 35%) ;
+    margin-top:  28px;
+}
+
+.creador{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 18px;
+    padding-bottom: 16px;
+}
+
+.creador h2 {
+ font-weight:300;
+ font-size:1.1rem
+}
+.creador img {
+ width:32px;
+ height:32px;
+ margin-right:12px;
+ border:1px solid var(--n-white);
+ border-radius:50px
+}
+.creador a {
+ transition:ease-in-out .4s
+}
+.creador a:hover {
+ color: hsl(178, 100%, 50%);
+ transition:ease-in-out .4s;
+
+}
+
+@media (max-width:310px) {
+ .container h1 {
+  font-size:1rem;
+  text-align:center;
+  padding-top:16px
+ }
+ .container p {
+  font-size:.8rem;
+  text-align:center;
+  padding-top:16px
+ }
+ .price {
+  font-size:.8rem;
+  padding-top:16px
+ }
+ .price li {
+  flex-direction:row;
+  margin:0 auto;
+  padding:4px 0
+ }
+ .line {
+  margin-top:12px
+ }
+ .creador {
+  display:flex;
+  justify-content:center;
+  margin:auto auto;
+  font-size:.7rem
+ }
+ .creador h2 {
+  font-size:.7rem
+ }
+ .creador img {
+  margin-right:8px
+ }
+}
